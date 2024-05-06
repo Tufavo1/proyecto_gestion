@@ -33,7 +33,7 @@ body {
 }
 
 .img-logo {
-    width: 100px;
+    width: auto;
     height: 100px;
     overflow: hidden;
 }
@@ -102,44 +102,12 @@ body {
     margin: 0 auto;
 }
 
-.row {
-    display: flex;
-    align-items: center;
-}
-
-.btn-filter {
-    background-color: #FF6F61 !important;
-    border: none;
-    color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-}
-
-.search {
-    flex: 1;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.btn-category {
-    background-color: #FF6F61 !important;
-    border: none;
-    color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-}
-
-.dropdown-menu {
-    background-color: #FF6F61 !important;
-    color: #000;
+.btn-search {
+    border-radius: 0 10px 10px 0 !important;
+    -webkit-border-radius: 0 10px 10px 0 !important;
+    -moz-border-radius: 0 10px 10px 0 !important;
+    -ms-border-radius: 0 10px 10px 0 !important;
+    -o-border-radius: 0 10px 10px 0 !important;
 }
 
 /* Estilos para el carrusel */
