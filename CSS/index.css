@@ -150,3 +150,17 @@ svg:hover {
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
 }
+nav{
+    background-color: #fff;
+    
+}
+
+
+footer{
+    background-color: #fff;
+    margin-top: 10%;
+    box-shadow: 4px 15px 30px rgba(0, 0, 0, 0.05)
+}
+#capiimg{
+    box-shadow: 4px 15px 30px rgba(0, 0, 0, 0.16)
+}
