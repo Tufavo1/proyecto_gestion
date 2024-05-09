@@ -57,8 +57,8 @@
             </div>
         </div>
     </nav>
-    <div class="wrapper">
 
+    <div class="wrapper">
         <div class="sidebar">
             <button class="btn-sidebar" data-target="container-infouser">Ver Perfil</button>
             <button class="btn-sidebar" data-target="container-historyuser">Ver Boletas</button>
@@ -73,30 +73,35 @@
                         <div class="info-row">
                             <label for="fullName" class="col-sm-4 col-form-label">Nombre Completo:</label>
                             <div class="col-sm-8">
-                                <span id="fullName">Jose Romero</span>
+                                <span id="fullName"></span>
                             </div>
                         </div>
                         <div class="info-row">
                             <label for="birthdate" class="col-sm-4 col-form-label">Fecha de Nacimiento:</label>
                             <div class="col-sm-8">
-                                <span id="birthdate">22/03/2002</span>
+                                <span id="birthdate"></span>
                             </div>
                         </div>
                         <div class="info-row">
                             <label for="email" class="col-sm-4 col-form-label">Email:</label>
                             <div class="col-sm-8">
-                                <span id="email">jose@gmail.com</span>
+                                <span id="email"></span>
                             </div>
                         </div>
-                        <div class="info-row">
+                        <div class="info-row" id="passwordRow">
                             <label for="password" class="col-sm-4 col-form-label">Contraseña:</label>
-                            <div class="col-sm-8">
-                                <span id="password">**********</span>
+                            <div class="col-sm-8 passwords">
+                                <input type="password" id="newPassword" placeholder="Nueva Contraseña"
+                                    style="display: none;">
+                                <input type="password" id="confirmNewPassword" placeholder="Confirmar Contraseña"
+                                    style="display: none;">
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12">
-                        <button class="btn-edit">Editar Información</button>
+                    <div class="col-sm-12 button-container">
+                        <button class="btn-edit" id="editBtn">Editar Información</button>
+                        <button class="btn-edit" id="cancelBtn" style="display: none;">Cancelar</button>
+                        <button class="btn-edit" id="saveBtn" style="display: none;">Guardar Información</button>
                     </div>
                 </section>
 
@@ -156,7 +161,36 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                compre 10000000
+                                <div class="info-modal">
+                                    <label for="fullName" class="col-sm-4 col-form-label">Nombre Completo:</label>
+                                    <div class="col-sm-8">
+                                        <span id="fullName">Jose Romero</span>
+                                    </div>
+                                </div>
+                                <div class="info-modal">
+                                    <label for="fullName" class="col-sm-4 col-form-label">Nombre Completo:</label>
+                                    <div class="col-sm-8">
+                                        <span id="fullName">Jose Romero</span>
+                                    </div>
+                                </div>
+                                <div class="info-modal">
+                                    <label for="fullName" class="col-sm-4 col-form-label">Nombre Completo:</label>
+                                    <div class="col-sm-8">
+                                        <span id="fullName">Jose Romero</span>
+                                    </div>
+                                </div>
+                                <div class="info-modal">
+                                    <label for="fullName" class="col-sm-4 col-form-label">Nombre Completo:</label>
+                                    <div class="col-sm-8">
+                                        <span id="fullName">Jose Romero</span>
+                                    </div>
+                                </div>
+                                <div class="info-modal">
+                                    <label for="fullName" class="col-sm-4 col-form-label">Nombre Completo:</label>
+                                    <div class="col-sm-8">
+                                        <span id="fullName">Jose Romero</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -251,7 +285,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <script src="JS/FunctionUsers.js"></script>
-
+<script src="JS/Getusers.js"></script>
 <script src="JS/jquery-3.7.1.min.js"></script>
 
 </html>

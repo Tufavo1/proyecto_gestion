@@ -148,6 +148,10 @@ body {
     display: none;
 }
 
+.signup-btn {
+    color: #fff;
+}
+
 #signup:checked~.slider-tab {
     left: 50%;
 }

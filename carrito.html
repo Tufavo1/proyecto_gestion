@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAPIBARA - login</title>
-    <link rel="stylesheet" href="CSS/acceso.css">
+    <title>CAPIBARA - Perfil</title>
+    <link rel="stylesheet" href="CSS/carrito.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -41,14 +41,14 @@
                         <a class="nav-link" href="#">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                                fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <a class="nav-link active" disabled><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                height="30" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
                                 <path
                                     d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
                             </svg></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" disabled><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                        <a class="nav-link" href="perfil.html"><svg xmlns="http://www.w3.org/2000/svg" width="30"
                                 height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                             </svg></a>
@@ -58,59 +58,87 @@
         </div>
     </nav>
 
-    <section class="form-user">
-        <div class="wrapper">
-            <div class="title-text">
-                <div class="title login">Iniciar Sesion</div>
-                <div class="title signup">Registrarse</div>
-            </div>
-            <div class="form-container">
-                <div class="slide-controls">
-                    <input class="input-slide" type="radio" name="slide" id="login" checked>
-                    <input class="input-slide" type="radio" name="slide" id="signup">
-                    <label for="login" class="slide login">Iniciar</label>
-                    <label for="signup" class="slide signup">Registrarme</label>
-                    <div class="slider-tab"></div>
+    <main>
+        <section id="cart-section">
+            <h2>Carrito de Compras</h2>
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="shipping-method">
+            <h2>Método de Envío</h2>
+            <form id="shipping-form">
+                <div>
+                    <input type="radio" id="domicilio" name="shipping" value="domicilio">
+                    <label for="domicilio">Despacho a Domicilio</label>
                 </div>
-                <div class="form-inner">
-                    <form id="loginUser" action="#" class="login">
-                        <div class="field">
-                            <input id="loginEmail" type="email" placeholder="Ingresa tu email" required>
-                        </div>
-                        <div class="field">
-                            <input id="loginPassword" type="password" placeholder="Ingresa tu password" required>
-                        </div>
-                        <div class="pass-link"><a href="#">Olvidaste Contrasennia?</a></div>
-                        <div class="field btn">
-                            <div class="btn-layer"></div>
-                            <input id="loginBtn" type="submit" value="Iniciar">
-                        </div>
-                    </form>
-                    <form id="registerUser" action="#" class="signup">
-                        <div class="field">
-                            <input id="nombre" type="text" placeholder="Nombre Completo" required>
-                        </div>
-                        <div class="field">
-                            <input id="fechaNacimiento" type="date" placeholder="Fecha de Nacimiento" required>
-                        </div>
-                        <div class="field">
-                            <input id="registerEmail" type="email" placeholder="Correo Electrónico" required>
-                        </div>
-                        <div class="field">
-                            <input id="registerPassword" type="password" placeholder="Contraseña" required>
-                        </div>
-                        <div class="field">
-                            <input id="confirmPassword" type="password" placeholder="Confirma Contraseña" required>
-                        </div>
-                        <div class="field btn">
-                            <div class="btn-layer"></div>
-                            <input id="registerBtn" type="submit" value="registrarme">
-                        </div>
-                    </form>
+                <div>
+                    <input type="radio" id="retiro" name="shipping" value="retiro">
+                    <label for="retiro">Retiro Físico</label>
                 </div>
-            </div>
-        </div>
-    </section>
+            </form>
+        </section>
+
+        <section id="shipping-details" style="display: none;">
+            <h2>Detalles de Envío</h2>
+            <form id="shipping-details-form">
+                <div>
+                    <label for="direccion">Ingresar Dirección:</label>
+                    <input type="text" id="direccion" name="direccion">
+                </div>
+                <div>
+                    <label for="numero-direccion">Ingresar Número de Dirección:</label>
+                    <input type="text" id="numero-direccion" name="numero-direccion">
+                </div>
+                <div>
+                    <label for="telefono">Ingresar Número de Teléfono:</label>
+                    <input type="text" id="telefono" name="telefono">
+                </div>
+                <div>
+                    <label for="region">Ingresar Región:</label>
+                    <input type="text" id="region" name="region">
+                </div>
+                <div>
+                    <label for="comuna">Ingresar Comuna:</label>
+                    <input type="text" id="comuna" name="comuna">
+                </div>
+                <button type="button" id="confirmar-envio">Confirmar Envío</button>
+                <button type="button" id="editar-direccion">Editar Dirección</button>
+            </form>
+        </section>
+
+        <section id="pickup-details" style="display: none;">
+            <h2>Detalles de Retiro</h2>
+            <form id="pickup-details-form">
+                <div>
+                    <label for="region-retiro">Seleccionar Región:</label>
+                    <select id="region-retiro" name="region-retiro">
+                        <option value="">Seleccione una región</option>
+                        <!-- Opciones de región se pueden agregar dinámicamente desde JavaScript -->
+                    </select>
+                </div>
+                <div>
+                    <label for="comuna-retiro">Seleccionar Comuna:</label>
+                    <select id="comuna-retiro" name="comuna-retiro">
+                        <option value="">Seleccione una comuna</option>
+                        <!-- Opciones de comuna se pueden agregar dinámicamente desde JavaScript -->
+                    </select>
+                </div>
+                <button type="button" id="confirmar-retiro">Confirmar Retiro</button>
+            </form>
+        </section>
+
+        <section></section>
+    </main>
 
     <footer class="custom-footer py-4">
         <div class="social-media">
@@ -139,7 +167,6 @@
             <p>&copy; 2024 TuFavorito1.</p>
         </div>
     </footer>
-
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -150,6 +177,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <script src="JS/FunctionUsers.js"></script>
-<script src="JS/Formusers.js"></script>
+<script src="JS/jquery-3.7.1.min.js"></script>
+<script src="JS/get-cart.js"></script>
 
 </html>
