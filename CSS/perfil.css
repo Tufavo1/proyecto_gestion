@@ -1,0 +1,252 @@
+/*Estilos del body*/
+body {
+    background-color: #F5F5F5 !important;
+    margin: 0;
+    padding: 5px;
+}
+
+/*Estilos del navbar*/
+.navbar {
+    padding: 15px;
+}
+
+.img-logo {
+    width: auto;
+    height: 100px;
+    overflow: hidden;
+}
+
+.search {
+    margin: 0 auto;
+    width: auto;
+}
+
+.form-control {
+    width: 350px !important;
+    border-radius: 10px 0 0 10px !important;
+    text-align: center;
+    -webkit-border-radius: 10px 0 0 10px !important;
+    -moz-border-radius: 10px 0 0 10px !important;
+    -ms-border-radius: 10px 0 0 10px !important;
+    -o-border-radius: 10px 0 0 10px !important;
+}
+
+.btn-search {
+    background-color: #FF6F61 !important;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+    -webkit-border-radius: 0 10px 10px 0;
+    -moz-border-radius: 0 10px 10px 0;
+    -ms-border-radius: 0 10px 10px 0;
+    -o-border-radius: 0 10px 10px 0;
+}
+
+.btn-search:hover {
+    background-color: #FFA07A !important;
+}
+
+.nav-item {
+    justify-content: space-between;
+    margin-right: 15px;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    padding: 10px;
+}
+
+.nav-link:hover {
+    color: #FF6F61 !important;
+}
+
+.active {
+    color: #FFA07A !important;
+}
+
+/*Esrilos para el contenedor del perfil*/
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    width: 15%;
+    height: 50vh;
+    margin-top: 10%;
+}
+
+.btn-sidebar {
+    background-color: #000;
+    margin-bottom: 10px;
+    width: 100%;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.container-profile {
+    margin-top: 8%;
+    padding: 20px;
+    background-color: #fff;
+    width: auto !important;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/*Estilos para el section de user*/
+.user-info {
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+    padding: 20px;
+}
+
+.user-info :where(h2) {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    margin-left: 320px;
+}
+
+.info-row :where(label) {
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.info-row :where(span) {
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+}
+
+.btn-edit {
+    background-color: #FF6F61;
+    border: none;
+    padding: 10px;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.btn-edit:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.passwords {
+    display: block;
+    margin: 0 auto;
+}
+
+/*Estilo para el historial de boletas*/
+.container-historyuser :where(h2) {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.table-responsive {
+    width: 100%;
+    height: auto;
+}
+
+.table {
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+}
+
+/*Estilos para el footer*/
+.custom-footer {
+    margin-top: 50px;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: #ff6f61 !important;
+    color: #fff;
+    font-weight: 900;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
+}
+
+.social-media {
+    flex: 1;
+    text-align: left;
+}
+
+.link-social {
+    color: #F5F5F5;
+}
+
+.link-social:hover {
+    color: #000;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: center;
+}
+
+.link-contact {
+    color: #000;
+    text-decoration: none;
+}
+
+.link-contact:hover {
+    color: #F5F5F5;
+}
+
+.copyright {
+    flex: 1;
+    text-align: right;
+}
+
+.social-media a {
+    color: #fff;
+    margin-right: 10px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}

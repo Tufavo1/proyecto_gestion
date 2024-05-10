@@ -1,0 +1,147 @@
+/*Estilos del body*/
+body {
+    background-color: #F5F5F5 !important;
+    margin: 0;
+    padding: 5px;
+}
+
+/*Estilos para el header*/
+.hsocial {
+    border-bottom: 2px solid #000;
+    margin-top: 10px;
+}
+
+.text-start {
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.btn-social :where(svg) {
+    color: #000;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+
+.btn-social svg:hover {
+    color: #FF6F61 !important;
+}
+
+/*Estilos del navbar*/
+.navbar {
+    padding: 15px;
+}
+
+.img-logo {
+    width: auto;
+    height: 100px;
+    overflow: hidden;
+}
+
+.search {
+    margin: 0 auto;
+    width: auto;
+}
+
+.form-control {
+    width: 350px !important;
+    border-radius: 10px 0 0 10px !important;
+    text-align: center;
+    -webkit-border-radius: 10px 0 0 10px !important;
+    -moz-border-radius: 10px 0 0 10px !important;
+    -ms-border-radius: 10px 0 0 10px !important;
+    -o-border-radius: 10px 0 0 10px !important;
+}
+
+.btn-search {
+    background-color: #FF6F61 !important;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+    -webkit-border-radius: 0 10px 10px 0;
+    -moz-border-radius: 0 10px 10px 0;
+    -ms-border-radius: 0 10px 10px 0;
+    -o-border-radius: 0 10px 10px 0;
+}
+
+.btn-search:hover {
+    background-color: #FFA07A !important;
+}
+
+.nav-item {
+    justify-content: space-between;
+    margin-right: 15px;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    padding: 10px;
+}
+
+.nav-link:hover {
+    color: #FF6F61 !important;
+}
+
+.active {
+    color: #FFA07A !important;
+}
+
+/*Estilos para el footer*/
+.custom-footer {
+    background-color: #ff6f61;
+    color: #fff;
+    font-weight: 900;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
+}
+
+.social-media {
+    flex: 1;
+    text-align: left;
+}
+
+.link-social {
+    color: #F5F5F5;
+}
+
+.link-social:hover {
+    color: #000;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: center;
+}
+
+.link-contact {
+    color: #000;
+    text-decoration: none;
+}
+
+.link-contact:hover {
+    color: #F5F5F5;
+}
+
+.copyright {
+    flex: 1;
+    text-align: right;
+}
+
+.social-media a {
+    color: #fff;
+    margin-right: 10px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
