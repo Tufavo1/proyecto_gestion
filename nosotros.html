@@ -4,18 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAPIBARA - login</title>
-    <link rel="stylesheet" href="CSS/acceso.css">
+    <link rel="stylesheet" href="CSS/nosotros.css">
+    <link rel="icon" href="IMG/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    <title>Nosotros</title>
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid justify-content-between">
-            <a class="navbar-brand" href="index.html"><img class="img-logo" src="IMG/logo.png" alt="Moblum"></a>
+            <a class="navbar-brand" disabled><img class="img-logo rounded img-fluid" style="width: 30%;"
+                    src="IMG/logo.png" alt="Moblum"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -26,7 +28,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html"><svg
+                        <a class="nav-link" aria-current="page" disabled href="index.html"><svg
                                 xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                                 class="bi bi-house-fill" viewBox="0 0 16 16">
                                 <path
@@ -35,23 +37,20 @@
                             </svg> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Nosotros</a>
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" id="cartLink" href="carrito.html">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                                class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <a class="nav-link" href="carrito.html"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                height="30" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
                                 <path
                                     d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-                            </svg>
-                            <span class="badge cart-counter">0</span>
-                        </a>
+                            </svg></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" disabled><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                        <a class="nav-link" href="acceso.html"><svg xmlns="http://www.w3.org/2000/svg" width="30"
                                 height="30" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                             </svg></a>
@@ -61,61 +60,33 @@
         </div>
     </nav>
 
-    <section class="form-user">
-        <div class="wrapper">
-            <div class="title-text">
-                <div class="title login">Iniciar Sesion</div>
-                <div class="title signup">Registrarse</div>
-            </div>
-            <div class="form-container">
-                <div class="slide-controls">
-                    <input class="input-slide" type="radio" name="slide" id="login" checked>
-                    <input class="input-slide" type="radio" name="slide" id="signup">
-                    <label for="login" class="slide login">Iniciar</label>
-                    <label for="signup" class="slide signup">Registrarme</label>
-                    <div class="slider-tab"></div>
-                </div>
-                <div class="form-inner">
-                    <form id="loginUser" action="#" class="login">
-                        <div class="field">
-                            <input id="loginEmail" type="email" placeholder="Ingresa tu email" required>
-                        </div>
-                        <div class="field">
-                            <input id="loginPassword" type="password" placeholder="Ingresa tu password" required>
-                        </div>
-                        <div class="pass-link"><a href="#">Olvidaste Contrasennia?</a></div>
-                        <div class="field btn">
-                            <div class="btn-layer"></div>
-                            <input id="loginBtn" type="submit" value="Iniciar">
-                        </div>
-                    </form>
-                    <form id="registerUser" action="#" class="signup">
-                        <div class="field">
-                            <input id="nombre" type="text" placeholder="Nombre Completo" required>
-                        </div>
-                        <div class="field">
-                            <input id="fechaNacimiento" type="date" placeholder="Fecha de Nacimiento" required>
-                        </div>
-                        <div class="field">
-                            <input id="registerEmail" type="email" placeholder="Correo Electrónico" required>
-                        </div>
-                        <div class="field">
-                            <input id="registerPassword" type="password" placeholder="Contraseña" required>
-                        </div>
-                        <div class="field">
-                            <input id="confirmPassword" type="password" placeholder="Confirma Contraseña" required>
-                        </div>
-                        <div class="field btn">
-                            <div class="btn-layer"></div>
-                            <input id="registerBtn" type="submit" value="registrarme">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main>
+        <section class="container-fd p-5">
 
-    <footer class="custom-footer py-0">
+            <div style="background-color: #FFA07A; border-radius: 15px;">
+                <h1 class="p-3  border-2, text-center" style="color:#fff;">CAPIBARA</h1>
+                <h3 class="p-2 text-center">Es una empresa de venta de muebles familiar para personas mayores</h3>
+                <h4 class="ps-5 pe-5 pt-5" style="background-color: #fff;">Nuestra visión
+                    <p class="p-4 fs-6 text-right" style="background-color: #fff;">
+                        Nuestra vision es poder ampliar el alcance de la empresa hacia mas clientes, utilizando un
+                        metodo moderno y amigable.
+                    </p>
+                </h4>
+                <h4 class="ps-5 pe-5 pt-5" style="background-color: #fff;">Nuestra misión
+                    <p class="p-4 fs-6 text-right" style="background-color: #fff;">
+                        Buscamos desarrollar nuestro comercio de la venta de muebles por medio de una pagina web en la
+                        cual se les permita a nuestros clientes
+                        explorar y realizar compras de los producctos que más les gusten y de manera conveniente en
+                        cualquier lugar donde se encuentren.
+                    </p>
+                </h4>
+                <br>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="custom-footer py-4">
         <div class="container-fluid">
 
             <div class="row p-5 pb-2 text-black">
@@ -190,16 +161,5 @@
     </footer>
 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.7.1.slim.js"
-    integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<script src="JS/FunctionUsers.js"></script>
-<script src="JS/Formusers.js"></script>
-<script src="JS/cart-shop.js"></script>
 
 </html>

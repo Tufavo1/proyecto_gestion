@@ -1,19 +1,53 @@
-document.getElementById("btn-add-to-cart").addEventListener("click", function () {
-    var title = document.querySelector(".card-title").innerText;
-    var price = document.getElementById("price-card").innerText;
-    var imageSrc = document.querySelector(".card-img-top").getAttribute("src");
+document.addEventListener('DOMContentLoaded', function () {
 
-    var product = {
-        title: title,
-        price: price,
-        imageSrc: imageSrc
-    };
+    const addToCartButtons = document.querySelectorAll('.btn-cart');
+    const cartCounter = document.querySelector('.cart-counter');
+    const cartLink = document.getElementById('cartLink');
 
-    var cart = JSON.parse(localStorage.getItem("carritoCompras")) || [];
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', addToCartClicked);
+    });
 
-    cart.push(product);
+    updateCartCounter();
 
-    localStorage.setItem("carritoCompras", JSON.stringify(cart));
+    function addToCartClicked(event) {
+        const button = event.target;
+        const card = button.closest('.card');
+        const cardTitle = card.querySelector('.card-title').textContent;
+        const cardPrice = card.querySelector('.card-price').textContent;
+        const cardId = card.getAttribute('id');
 
-    alert("Producto agregado al carrito");
+        addItemToCart(cardId, cardTitle, cardPrice);
+        updateCartCounter();
+        updateCartLink();
+    }
+
+    function addItemToCart(id, title, price) {
+        const cartItem = {
+            id: id,
+            title: title,
+            price: price
+        };
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push(cartItem);
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    function updateCartCounter() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        if (cartCounter) {
+            cartCounter.textContent = cart.length;
+        }
+    }
+
+    function updateCartLink() {
+        if (!localStorage.getItem('cart') || JSON.parse(localStorage.getItem('cart')).length === 0) {
+            cartLink.classList.add('disabled');
+            cartLink.removeAttribute('href');
+        } else {
+            cartLink.classList.remove('disabled');
+            cartLink.setAttribute('href', 'carrito.html');
+        }
+    }
 });

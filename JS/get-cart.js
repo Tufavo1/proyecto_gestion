@@ -3,23 +3,33 @@ function cargarCarrito() {
     var tableBody = document.querySelector("#cart-table tbody");
 
     tableBody.innerHTML = "";
+    var subtotal = 0;
 
     cart.forEach(function (product) {
         var row = document.createElement("tr");
         row.innerHTML = `
+            <td>${product.id}</td>
             <td><img src="${product.imageSrc}" alt="Imagen de producto" style="width: 50px; height: 50px;"></td>
             <td>${product.title}</td>
             <td>$${product.price}</td>
         `;
         tableBody.appendChild(row);
+        subtotal += parseFloat(product.price);
     });
+
+    var iva = subtotal * 0.19;
+    var total = subtotal + iva;
+
+    document.getElementById("Sub-cart").textContent = "$" + subtotal.toFixed(0);
+    document.getElementById("iva-cart").textContent = "$" + iva.toFixed(0);
+    document.getElementById("Total-cart").textContent = "$" + total.toFixed(0);
 }
+
 
 window.addEventListener("load", cargarCarrito);
 
 var shippingForm = document.getElementById("shipping-form");
 var shippingDetailsSection = document.getElementById("shipping-details");
-var pickupDetailsSection = document.getElementById("pickup-details");
 var editarDireccionButton = document.getElementById("editar-direccion");
 
 shippingForm.addEventListener("change", function (event) {
@@ -27,7 +37,6 @@ shippingForm.addEventListener("change", function (event) {
         shippingDetailsSection.style.display = "block";
         disableFormFields(shippingDetailsSection);
         editarDireccionButton.style.display = "block";
-        pickupDetailsSection.style.display = "none";
 
     } else if (event.target.value === "retiro") {
         shippingDetailsSection.style.display = "none";
@@ -39,6 +48,13 @@ shippingForm.addEventListener("change", function (event) {
 var confirmarEnvioButton = document.getElementById("confirmar-envio");
 
 confirmarEnvioButton.addEventListener("click", function () {
+    var costoEnvio = calcularCostoEnvio(document.getElementById("zona").value);
+    var subtotalActual = parseFloat(document.getElementById("Sub-cart").textContent.substring(1));
+    var nuevoTotal = subtotalActual + costoEnvio;
+
+    document.getElementById("Cost-despacho").textContent = "$" + costoEnvio.toFixed(0);
+    document.getElementById("Total-cart").textContent = "$" + nuevoTotal.toFixed(0);
+
     alert("Detalles de envío confirmados");
     disableFormFields(shippingDetailsSection);
     editarDireccionButton.style.display = "block";
@@ -47,13 +63,6 @@ confirmarEnvioButton.addEventListener("click", function () {
 editarDireccionButton.addEventListener("click", function () {
     enableFormFields(shippingDetailsSection);
     editarDireccionButton.style.display = "none";
-});
-
-var confirmarRetiroButton = document.getElementById("confirmar-retiro");
-
-confirmarRetiroButton.addEventListener("click", function () {
-    alert("Retiro físico confirmado");
-    disableFormFields(pickupDetailsSection);
 });
 
 function disableFormFields(form) {
@@ -68,4 +77,70 @@ function enableFormFields(form) {
     for (var i = 0; i < fields.length; i++) {
         fields[i].disabled = false;
     }
+}
+
+function calcularCostoEnvio(zona) {
+    var preciosPorZona = {
+        "Zona 1 (Arica y Parinacota - Antofagasta)": {
+            1001: 30000,
+            1002: 60000,
+            1003: 15000,
+            1004: 60000,
+            1005: 120000,
+            1006: 120000,
+            1007: 20000,
+            1008: 30000
+        },
+        "Zona 2 (Atacama - Coquimbo)": {
+            1001: 30000,
+            1002: 60000,
+            1003: 15000,
+            1004: 60000,
+            1005: 120000,
+            1006: 120000,
+            1007: 20000,
+            1008: 30000
+        },
+        "Zona 3 (Valparaiso - Maule)": {
+            1001: 30000,
+            1002: 15000,
+            1003: 10000,
+            1004: 30000,
+            1005: 100000,
+            1006: 100000,
+            1007: 20000,
+            1008: 30000
+        },
+        "Zona 4 (BIOBIO - Los Lagos)": {
+            1001: 50000,
+            1002: 60000,
+            1003: 10000,
+            1004: 30000,
+            1005: 100000,
+            1006: 100000,
+            1007: 20000,
+            1008: 30000
+        },
+        "Zona 5 (Aysen - Magallanes)": {
+            1001: 50000,
+            1002: 60000,
+            1003: 15000,
+            1004: 60000,
+            1005: 120000,
+            1006: 120000,
+            1007: 20000,
+            1008: 30000
+        }
+    };
+
+    var cart = JSON.parse(localStorage.getItem("carritoCompras")) || [];
+    var costoTotalEnvio = 0;
+
+    cart.forEach(function (product) {
+        if (preciosPorZona[zona] && preciosPorZona[zona][product.id]) {
+            costoTotalEnvio += preciosPorZona[zona][product.id];
+        }
+    });
+
+    return costoTotalEnvio;
 }

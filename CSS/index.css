@@ -9,12 +9,14 @@ body {
 .hsocial {
     border-bottom: 2px solid #000;
     margin-top: 10px;
+    width: 100% !important;
 }
 
 .text-start {
     color: #000;
     font-size: 20px;
     font-weight: 400;
+    width: 100%;
 }
 
 .btn-social :where(svg) {
@@ -25,6 +27,38 @@ body {
 
 .btn-social svg:hover {
     color: #FF6F61 !important;
+}
+
+.btn-ayuda {
+    background-color: #FF6F61 !important;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.btn-ayuda:hover {
+    background-color: #e64c3c !important;
+}
+
+.btn-despacho {
+    background-color: #FF6F61 !important;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.btn-despacho:hover {
+    background-color: #e64c3c !important;
 }
 
 /*Estilos del navbar*/
@@ -89,9 +123,17 @@ body {
     color: #FFA07A !important;
 }
 
+.cart-counter {
+    background-color: #e64c3c;
+}
+
 /*Estilos del navbar collapse*/
 
 /*Estilos para el main*/
+.container-main {
+    padding: 20px;
+    margin-bottom: 20px;
+}
 
 /*Estilos para el section container*/
 .container-fd {
@@ -143,6 +185,30 @@ body {
     display: block;
 }
 
+/*Estilos para el boton ver mas productos*/
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-link {
+    background-color: #FF6F61;
+    padding: 10px;
+    text-decoration: none !important;
+    color: #000;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-right: 120px;
+}
+
+.btn-link:hover {
+    color: #000 !important;
+    background-color: #FFA07A;
+}
+
 /*Estilos para las cards*/
 .container-card {
     margin-top: 10px;
@@ -152,9 +218,9 @@ body {
 }
 
 .card {
-    width: auto;
+    width: 400px;
     margin: 10px;
-    height: 400px !important;
+    height: auto !important;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -240,13 +306,32 @@ body {
     transform: translateY(0);
 }
 
-.card-description {
-    margin-bottom: 5px;
+.card-TipoM {
+    color: #000;
+    font-size: 15px;
+}
+
+.Type-card {
+    color: #000;
     font-weight: 500;
 }
 
-.additional-info select {
-    margin-bottom: 5px;
+.btn-view {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+}
+
+.btn-view:hover {
+    background-color: #e64c3c;
 }
 
 .btn-cart {
@@ -267,26 +352,9 @@ body {
     background-color: #e64c3c;
 }
 
-.color-select {
-    margin-bottom: 10px;
-}
-
-.select-option {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
-    width: 350px;
-    text-align: center;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-}
-
 /* Estilos para el modal */
 .modal {
     display: none;
-    /* Ocultar el modal por defecto */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -295,7 +363,6 @@ body {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Fondo semitransparente */
 }
 
 .modal-content {
@@ -304,10 +371,16 @@ body {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    text-align: center;
+}
+
+.modal-info-card {
+    margin: auto;
+    width: 100%;
 }
 
 .close {
-    color: #aaa;
+    color: #FF6F61 !important;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -336,22 +409,13 @@ body {
     -o-border-radius: 10px 10px 0 0;
 }
 
-.social-media {
-    flex: 1;
-    text-align: left;
-}
-
 .link-social {
     color: #F5F5F5;
+    text-decoration: none;
 }
 
 .link-social:hover {
     color: #000;
-}
-
-.contact-info {
-    flex: 1;
-    text-align: center;
 }
 
 .link-contact {
@@ -363,16 +427,20 @@ body {
     color: #F5F5F5;
 }
 
-.copyright {
-    flex: 1;
-    text-align: right;
-}
-
 .social-media a {
     color: #fff;
     margin-right: 10px;
 }
 
-.contact-info p {
-    margin: 5px 0;
+.link-social-contact {
+    color: #fff;
+    text-decoration: none;
+}
+
+.link-social-contact:hover {
+    color: #000;
+}
+
+.link-social-contact :where(svg) {
+    margin-right: 5px;
 }
