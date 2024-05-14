@@ -123,3 +123,136 @@ body {
 .link-social-contact :where(svg) {
     margin-right: 5px;
 }
+
+
+/* Estlo carro-item */
+.body{
+    overflow: hidden;
+  }
+
+  .cart{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+  }
+  
+  .cart-container {
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .cart-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    flex-direction: column;
+  }
+  
+  .cart-item img {
+    width: 130px;
+    height: 130px;
+    margin: 15px;
+    border-radius: 50%;
+  }
+  
+  .item{
+    background: #FFA07A;
+    border-radius: 20px;
+    margin-top: 17px;
+    width: 700px;
+    display: flex;
+  }
+  
+  .cart-item-details h3 {
+    margin-top: 0;
+  }
+  
+  .quantity-control {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+  }
+  
+  .quantity-control button {
+    background-color: transparent;
+    color: white;
+    border: none;
+  }
+  
+  .precio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+  }
+  
+  .quantity-control span {
+    margin: 0 10px;
+  }
+  
+  .cart-summary {
+    background-color: #242526;
+    color: white;
+    width: 350px;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 20px;
+  }
+  
+  .checkout-btn {
+    background-color: rgb(6, 171, 22);
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .discount-code {
+    margin-top: 10px;
+  }
+  
+  
+  .container{
+    display: flex;
+    width: 100%;
+    height: 649px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .price-resume{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .container-resumen{
+    display: flex;
+  }
+
+  .item-modal{
+    display: flex;
+    width: 819px;
+    flex-direction: column;
+    margin-left: 184px;
+}
+
+
+  

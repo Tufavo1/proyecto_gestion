@@ -1,4 +1,4 @@
-function cargarCarrito() {
+/* function cargarCarrito() {
     var cart = JSON.parse(localStorage.getItem("carritoCompras")) || [];
     var tableBody = document.querySelector("#cart-table tbody");
 
@@ -23,10 +23,10 @@ function cargarCarrito() {
     document.getElementById("Sub-cart").textContent = "$" + subtotal.toFixed(0);
     document.getElementById("iva-cart").textContent = "$" + iva.toFixed(0);
     document.getElementById("Total-cart").textContent = "$" + total.toFixed(0);
-}
+} */
 
 
-window.addEventListener("load", cargarCarrito);
+/* window.addEventListener("load", cargarCarrito); */
 
 var shippingForm = document.getElementById("shipping-form");
 var shippingDetailsSection = document.getElementById("shipping-details");

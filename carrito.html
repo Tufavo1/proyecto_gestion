@@ -59,94 +59,100 @@
     </nav>
 
     <main>
-        <section id="cart-section">
-            <h2>Carrito de Compras</h2>
-            <table id="cart-table">
-                <thead>
-                    <tr>
-                        <th>Imagen</th>
-                        <th>Producto</th>
-                        <th>Precio</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </section>
+        
+            <div class="item-modal">
+                <section id="shipping-method">
+                    <h2>Método de Envío</h2>
+                    <form id="shipping-form">
+                        <div>
+                            <input type="radio" id="domicilio" name="shipping" value="domicilio">
+                            <label for="domicilio">Despacho a Domicilio</label>
+                        </div>
+                    </form>
+                </section>
 
-        <section id="shipping-method">
-            <h2>Método de Envío</h2>
-            <form id="shipping-form">
-                <div>
-                    <input type="radio" id="domicilio" name="shipping" value="domicilio">
-                    <label for="domicilio">Despacho a Domicilio</label>
-                </div>
-            </form>
-        </section>
+                <section id="shipping-details" style="display: none;">
+                    <h2>Detalles de Envío</h2>
+                    <form id="shipping-details-form">
+                        <div>
+                            <label for="direccion">Ingresar Dirección:</label>
+                            <input type="text" id="direccion" name="direccion">
+                        </div>
+                        <div>
+                            <label for="numero-direccion">Ingresar Número de Dirección:</label>
+                            <input type="text" id="numero-direccion" name="numero-direccion">
+                        </div>
+                        <div>
+                            <label for="telefono">Ingresar Número de Teléfono:</label>
+                            <input type="text" id="telefono" name="telefono">
+                        </div>
+                        <div>
+                            <label for="zona">Seleccionar Zona:</label>
+                            <select id="zona" name="zona">
+                                <option value="">Seleccione una zona</option>
+                                <option value="Zona 1 (Arica y Parinacota - Antofagasta)">Zona 1 (Arica y Parinacota -
+                                    Antofagasta)</option>
+                                <option value="Zona 2 (Atacama - Coquimbo)">Zona 2 (Atacama - Coquimbo)</option>
+                                <option value="Zona 3 (Valparaiso - Maule)">Zona 3 (Valparaiso - Maule)</option>
+                                <option value="Zona 4 (BIOBIO - Los Lagos)">Zona 4 (BIOBIO - Los Lagos)</option>
+                                <option value="Zona 5 (Aysen - Magallanes)">Zona 5 (Aysen - Magallanes)</option>
+                            </select>
+                        </div>
+                        <div id="region-container" style="display: none;">
+                            <label for="region">Seleccionar Región:</label>
+                            <select id="region" name="region">
+                                <option value="">Seleccione una región</option>
+                            </select>
+                        </div>
+                        <div id="comuna-container" style="display: none;">
+                            <label for="comuna">Seleccionar Comuna:</label>
+                            <select id="comuna" name="comuna">
+                                <option value="">Seleccione una comuna</option>
+                            </select>
+                        </div>
+                        <button type="button" id="confirmar-envio">Confirmar Envío</button>
+                        <button type="button" id="editar-direccion">Editar Dirección</button>
+                    </form>
+                </section>
+            </div>
 
-        <section id="shipping-details" style="display: none;">
-            <h2>Detalles de Envío</h2>
-            <form id="shipping-details-form">
-                <div>
-                    <label for="direccion">Ingresar Dirección:</label>
-                    <input type="text" id="direccion" name="direccion">
-                </div>
-                <div>
-                    <label for="numero-direccion">Ingresar Número de Dirección:</label>
-                    <input type="text" id="numero-direccion" name="numero-direccion">
-                </div>
-                <div>
-                    <label for="telefono">Ingresar Número de Teléfono:</label>
-                    <input type="text" id="telefono" name="telefono">
-                </div>
-                <div>
-                    <label for="zona">Seleccionar Zona:</label>
-                    <select id="zona" name="zona">
-                        <option value="">Seleccione una zona</option>
-                        <option value="Zona 1 (Arica y Parinacota - Antofagasta)">Zona 1 (Arica y Parinacota -
-                            Antofagasta)</option>
-                        <option value="Zona 2 (Atacama - Coquimbo)">Zona 2 (Atacama - Coquimbo)</option>
-                        <option value="Zona 3 (Valparaiso - Maule)">Zona 3 (Valparaiso - Maule)</option>
-                        <option value="Zona 4 (BIOBIO - Los Lagos)">Zona 4 (BIOBIO - Los Lagos)</option>
-                        <option value="Zona 5 (Aysen - Magallanes)">Zona 5 (Aysen - Magallanes)</option>
-                    </select>
-                </div>
-                <div id="region-container" style="display: none;">
-                    <label for="region">Seleccionar Región:</label>
-                    <select id="region" name="region">
-                        <option value="">Seleccione una región</option>
-                    </select>
-                </div>
-                <div id="comuna-container" style="display: none;">
-                    <label for="comuna">Seleccionar Comuna:</label>
-                    <select id="comuna" name="comuna">
-                        <option value="">Seleccione una comuna</option>
-                    </select>
-                </div>
-                <button type="button" id="confirmar-envio">Confirmar Envío</button>
-                <button type="button" id="editar-direccion">Editar Dirección</button>
-            </form>
-        </section>
+            <div class="cart">
+                <div class="cart-container">
 
-        <section class="checkout" id="Checkout">
-            <h2>Resumen de la Compra</h2>
-            <div class="subtotal">
-                <span>Subtotal:</span>
-                <span id="Sub-cart"></span>
+                    <div class="cart-item">
+
+                        <div class="item">
+
+                            <img src="" alt="">
+                            <div class="cart-item-details"
+                                style="width: 100%; display: flex; flex-direction: column; justify-content: center;">
+                                <h3></h3>
+                                <div class="quantity-control">
+                                    <button class="btn-resta">-</button>
+                                    <span></span>
+                                    <button class="btn-suma">+</button>
+                                </div>
+                            </div>
+                            <div class="precio"><span><strong></strong> CLP</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-summary">
+                    <h3>Resumen</h3>
+                    <p> productos</p>
+                    <div class="price-resume">
+                        <h4>Subtotal: $<span id="subtotal">0</span> CLP</h4>
+                        <h5>IVA (19%): $<span id="iva">0</span> CLP</h5>
+                        <h5>Costo despacho: $<span id="costo-despacho">0</span> CLP</h5>
+                        <h5>Total: $<span id="total">0</span> CLP</h5>
+                    </div>
+                    <button type="submit" class="checkout-btn">Pagar con Webpay Plus</button>
+                </div>
             </div>
-            <div class="iva">
-                <span>IVA (19%):</span>
-                <span id="iva-cart"></span>
-            </div>
-            <div class="despacho">
-                <span>Costo de Despacho:</span>
-                <span id="Cost-despacho"></span>
-            </div>
-            <div class="total">
-                <span>Total:</span>
-                <span id="Total-cart"></span>
-            </div>
-        </section>
+        
+
+        
+    
     </main>
 
     <footer class="custom-footer py-0">
@@ -235,5 +241,6 @@
 <script src="JS/jquery-3.7.1.min.js"></script>
 <script src="JS/get-cart.js"></script>
 <script src="JS/get-zones.js"></script>
+<script src="JS/get-product.js"></script>
 
 </html>
