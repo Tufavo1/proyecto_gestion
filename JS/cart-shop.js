@@ -16,17 +16,20 @@ document.addEventListener('DOMContentLoaded', function () {
         const cardTitle = card.querySelector('.card-title').textContent;
         const cardPrice = card.querySelector('.card-price').textContent;
         const cardId = card.getAttribute('id');
+        const cardImageElement = card.querySelector('.card-img');
+        const cardImageSrc = cardImageElement ? cardImageElement.getAttribute('src') : null;
 
-        addItemToCart(cardId, cardTitle, cardPrice);
+        addItemToCart(cardId, cardTitle, cardPrice, cardImageSrc);
         updateCartCounter();
         updateCartLink();
     }
 
-    function addItemToCart(id, title, price) {
+    function addItemToCart(id, title, price, imageSrc) {
         const cartItem = {
             id: id,
             title: title,
-            price: price
+            price: price,
+            imageSrc: imageSrc
         };
 
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -42,7 +45,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateCartLink() {
-        if (!localStorage.getItem('cart') || JSON.parse(localStorage.getItem('cart')).length === 0) {
+        // Check if localStorage has cart items
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Enable or disable cart link based on cart contents
+        if (cartItems.length === 0) {
             cartLink.classList.add('disabled');
             cartLink.removeAttribute('href');
         } else {
@@ -50,4 +57,6 @@ document.addEventListener('DOMContentLoaded', function () {
             cartLink.setAttribute('href', 'carrito.html');
         }
     }
+
+    updateCartLink();
 });

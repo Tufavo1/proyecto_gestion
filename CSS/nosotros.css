@@ -1,24 +1,75 @@
-/*Estilos body*/
+/*Estilos del body*/
 body {
     background-color: #F5F5F5 !important;
     margin: 0;
     padding: 5px;
 }
 
-/*Estilos navbar*/
+/*Estilos para el header*/
+.hsocial {
+    border-bottom: 2px solid #000;
+    margin-top: 10px;
+    width: 100% !important;
+}
+
+.text-start {
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    width: 100%;
+}
+
+.btn-social :where(svg) {
+    color: #000;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+
+.btn-social svg:hover {
+    color: #FF6F61 !important;
+}
+
+.btn-ayuda {
+    background-color: #FF6F61 !important;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.btn-ayuda:hover {
+    background-color: #e64c3c !important;
+}
+
+.btn-despacho {
+    background-color: #FF6F61 !important;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.btn-despacho:hover {
+    background-color: #e64c3c !important;
+}
+
+/*Estilos del navbar*/
 .navbar {
     padding: 15px;
-    background-color: #fff;
-    border-radius: 0 0px 10px 10px;
-    border-top: solid black;
-
 }
 
 .img-logo {
     width: auto;
     height: 100px;
     overflow: hidden;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .search {
@@ -70,6 +121,109 @@ body {
 
 .active {
     color: #FFA07A !important;
+}
+
+.cart-counter {
+    background-color: #e64c3c;
+}
+
+/*Estilos para nosotros*/
+.seccion-presentacion {
+    text-align: center;
+}
+
+.seccion-historia {
+    padding: 10px;
+    margin-top: 10px !important;
+    padding: 50px;
+}
+
+.seccion-historia :where(h3) {
+    float: left;
+    margin-top: 45px;
+    margin-left: 5%;
+}
+
+.seccion-historia :where(p) {
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* Estilo para la sección del equipo */
+.seccion-equipo {
+    display: flex;
+    align-items: flex-start;
+    padding: 50px;
+    border-top: 1px solid #000;
+}
+
+.seccion-equipo :where(h3) {
+    float: left;
+    margin-top: 100px !important;
+    margin-left: 5%;
+}
+
+.miembro-equipo-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.miembro-equipo {
+    width: 450px;
+    text-align: center;
+}
+
+.miembro-equipo :where(img) {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.miembro-equipo :where(h4) {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.cargo {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Estilo para la sección de valores */
+.seccion-valores {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 50px;
+    border-top: 1px solid #000;
+}
+
+.seccion-valores h3 {
+    float: left;
+    margin-top: 100px !important;
+    margin-left: 5%;
+}
+
+.seccion-valores ul {
+    list-style: none;
+    padding: 0;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.seccion-valores li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: start;
 }
 
 /*Estilos para el footer*/

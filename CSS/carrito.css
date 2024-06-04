@@ -72,6 +72,106 @@ body {
     color: #FFA07A !important;
 }
 
+/*Estilos para el carrito*/
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+/* Estilos para el carrito de compras */
+#cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#cart-table th,
+#cart-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+#cart-section {
+    margin-bottom: 40px;
+}
+
+/* Estilos para el método de envío */
+#shipping-method {
+    margin-bottom: 40px;
+}
+
+#shipping-form div {
+    margin-bottom: 10px;
+}
+
+/* Estilos para los detalles de envío */
+#shipping-details {
+    margin-bottom: 40px;
+}
+
+#shipping-details-form div {
+    margin-bottom: 10px;
+}
+
+#shipping-details-form select,
+#shipping-details-form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#shipping-details-form button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#shipping-details-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el resumen de compra */
+.checkout {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.checkout .subtotal,
+.checkout .iva,
+.checkout .despacho,
+.checkout .total {
+    margin-bottom: 10px;
+}
+
+.checkout .subtotal span,
+.checkout .iva span,
+.checkout .despacho span,
+.checkout .total span {
+    display: inline-block;
+    width: 200px;
+}
+
+/* Estilos para la respuesta de confirmación de envío */
+#confirmacion-envio {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #dff0d8;
+    border: 1px solid #d0e9c6;
+    color: #3c763d;
+    border-radius: 4px;
+}
+
 /*Estilos para el footer*/
 .custom-footer {
     background-color: #ff6f61;

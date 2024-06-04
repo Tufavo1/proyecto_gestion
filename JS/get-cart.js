@@ -1,5 +1,9 @@
+document.addEventListener('DOMContentLoaded', function () {
+    cargarCarrito();
+});
+
 function cargarCarrito() {
-    var cart = JSON.parse(localStorage.getItem("carritoCompras")) || [];
+    var cart = JSON.parse(localStorage.getItem("cart")) || [];
     var tableBody = document.querySelector("#cart-table tbody");
 
     tableBody.innerHTML = "";
@@ -8,7 +12,6 @@ function cargarCarrito() {
     cart.forEach(function (product) {
         var row = document.createElement("tr");
         row.innerHTML = `
-            <td>${product.id}</td>
             <td><img src="${product.imageSrc}" alt="Imagen de producto" style="width: 50px; height: 50px;"></td>
             <td>${product.title}</td>
             <td>$${product.price}</td>
@@ -24,7 +27,6 @@ function cargarCarrito() {
     document.getElementById("iva-cart").textContent = "$" + iva.toFixed(0);
     document.getElementById("Total-cart").textContent = "$" + total.toFixed(0);
 }
-
 
 window.addEventListener("load", cargarCarrito);
 
